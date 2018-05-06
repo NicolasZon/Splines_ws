@@ -14,10 +14,16 @@ import frames.primitives.*;
 import frames.core.*;
 import frames.processing.*;
 
+import java.util.List;
+import java.util.ArrayList;
+import java.lang.Math;
+
 // global variables
 // modes: 0 natural cubic spline; 1 Hermite;
 // 2 (degree 7) Bezier; 3 Cubic Bezier
 int mode;
+
+Functions bezier, hermite, bezier3, natural;
 
 Scene scene;
 Interpolator interpolator;
@@ -41,13 +47,21 @@ void setup() {
   interpolator = new Interpolator(scene, new Frame());
   // framesjs next version, simply go:
   //interpolator = new Interpolator(scene);
+  
+  bezier = new Functions();
+  hermite = new Functions();
+  bezier3 = new Functions();
+  natural = new Functions();
 
   // Using OrbitNodes makes path editable
   for (int i = 0; i < 8; i++) {
     Node ctrlPoint = new OrbitNode(scene);
     ctrlPoint.randomize();
+    //System.out.println(ctrlPoint);
     interpolator.addKeyFrame(ctrlPoint);
+    //System.out.println(interpolator);
   }
+  
 }
 
 void draw() {
@@ -71,13 +85,52 @@ void draw() {
   // To retrieve the positions of the control points do:
   // for(Frame frame : interpolator.keyFrames())
   //   frame.position();
+  
+  //Vector punto = new Vector();
+  List<Vector> puntos = new ArrayList<Vector>();
+  
+  for(Frame frame : interpolator.keyFrames()){
+    puntos.add(frame.position());
+    //puntos.add(punto);
+  }
+  //System.out.println(puntos);
+  
+  //Vector primer_punto = puntos.get(0);
+  //Vector punto_actual = puntos.get(0);
+  textSize(22);
+  fill(122, 0, 153);
+  switch (mode) {
+    case 0:
+      bezier.setPoints(puntos);
+      bezier.bezier();
+      text("Bezier", -100, 0);
+      break;
+    case 1:
+      hermite.setPoints(puntos);
+      hermite.hermite();
+      text("Hermite", -100, 0);
+      break;
+    case 2:
+      bezier3.setPoints(puntos);
+      bezier3.Bezier3();
+      text("Bezier cúbico", -100, 0);
+      break;
+    case 3:
+      natural.setPoints(puntos);
+      natural.splineCubicaNatural();
+      text("Cubicas Naturales", -100, 0);
+      break;
+      
+
+  }
 }
 
 void keyPressed() {
   if (key == ' ')
-    mode = mode < 3 ? mode+1 : 0;
+    mode = mode <= 4 ? mode+1 : 0;
   if (key == 'g')
     drawGrid = !drawGrid;
   if (key == 'c')
     drawCtrl = !drawCtrl;
+ 
 }
