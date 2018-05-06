@@ -25,10 +25,10 @@ Complete la tabla:
  Juan Nicolás Sastoque Espinosa | [NicolasZon](https://github.com/NicolasZon/) |
 | Liseth Briceño Albarracín | [ligibrial](https://github.com/ligibrial/) | 
 
-##Implementación
 
+## Implementacion
 
-Para realizar la implementación de Bezier se tuvo en cuenta la sumatoria de todos los puntos con el polinomio de Bernstein, los polinomios de grado Bernstein n forman la pase para los polinomios de grado n , para la implementación se tuvo en cuenta el tiempo para recorrer dicha curva.
+Para realizar la implementación de Bezier se tuvo en cuenta la sumatoria de todos los puntos con el polinomio de Bernstein, los polinomios de grado Bernstein n forman la base para los polinomios de grado n , para la implementación se tuvo en cuenta el tiempo para recorrer dicha curva.
 
 Por otro lado para la curva de Bezier cubico se definió 4 puntos de control  P0, P1,P2,P3 . P0 y P3, definen los puntos del inicio y final de la curva. P1 y P2 la dirección de la curva, como resultado una aproximación de Bézier, con ventaja de que esta es más suave en los puntos de unión, para la implementación de este se tuvo en cuenta la fórmula matemática para una curva con los 4 puntos de control con (0<t<1).
 
