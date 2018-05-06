@@ -7,6 +7,21 @@
  * Press ' ' to change the spline mode.
  * Press 'g' to toggle grid drawing.
  * Press 'c' to toggle the interpolator path drawing.
+ 
+REFERENCIAS:
+caso 2:Bezier cubico
+
+http://soft.vub.ac.be/~tvcutsem/teaching/wpo/grafsys/ex9/les9.html
+
+caso 0:Bezier(Grado 7)
+http://mathworld.wolfram.com/BezierCurve.html
+
+caso1 :Hermite
+https://en.wikipedia.org/wiki/Cubic_Hermite_spline
+
+caso 3:cubicas naturales
+http://www.inf-cr.uclm.es/www/cglez/downloads/docencia/AC/splines.pdf
+ 
  */
 
 import frames.input.*;
