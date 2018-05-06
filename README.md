@@ -42,10 +42,13 @@ Finalmente para la implementación de cubicas naturales se toma como referencia 
 
 caso 0:Bezier(Grado 7)
 http://mathworld.wolfram.com/BezierCurve.html
+
 caso1 :Hermite
 https://en.wikipedia.org/wiki/Cubic_Hermite_spline
+
 caso 2:Bezier cubico
 http://soft.vub.ac.be/~tvcutsem/teaching/wpo/grafsys/ex9/les9.html
+
 caso 3:cubicas naturales
 http://www.inf-cr.uclm.es/www/cglez/downloads/docencia/AC/splines.pdf
 
