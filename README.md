@@ -38,6 +38,19 @@ En cuanto a la implementación de Hermite , se puede describir el polinomio como
 Finalmente para la implementación de cubicas naturales se toma como referencia la implementación del algoritmo que tiene como base el punto  inicial y  el punto final  como la segunda derivada dando como resultado 0, se toma además como referencia que los puntos de control es n y el número de segmentos es n-1. Se analiza una mayor precisión en cuanto al dibujo de los segmentos de líneas, este  algoritmo implica mayor complejidad en cuanto a cálculos se refiere. 
 
 
+## Referencias
+
+caso 0:Bezier(Grado 7)
+http://mathworld.wolfram.com/BezierCurve.html
+caso1 :Hermite
+https://en.wikipedia.org/wiki/Cubic_Hermite_spline
+caso 2:Bezier cubico
+http://soft.vub.ac.be/~tvcutsem/teaching/wpo/grafsys/ex9/les9.html
+caso 3:cubicas naturales
+http://www.inf-cr.uclm.es/www/cglez/downloads/docencia/AC/splines.pdf
+
+
+
 ## Entrega
 
 * Modo de entrega: Haga [fork](https://help.github.com/articles/fork-a-repo/) de la plantilla e informe la url del repo en la hoja *urls* de la plantilla compartida (una sola vez por grupo). Plazo: 6/5/18 a las 24h.
